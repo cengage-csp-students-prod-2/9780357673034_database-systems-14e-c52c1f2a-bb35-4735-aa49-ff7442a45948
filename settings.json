@@ -1,3 +1,4 @@
 {
-  "language": "mysql"
+  "language": "mysql",
+  "restrictedFiles": [".setup.sql"]
 }
