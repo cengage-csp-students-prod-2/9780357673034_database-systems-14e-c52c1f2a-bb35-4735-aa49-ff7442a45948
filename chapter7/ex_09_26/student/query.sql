@@ -1,9 +1,4 @@
 SELECT
-P_DESCRIPT,
-P_QOH,
-P_PRICE,
-P_QOH * P_PRICE as 'Subtotal'
+SUM(P_QOH * P_PRICE) as 'Total Value of Inventory'
 FROM
-PRODUCT
-ORDER BY
-Subtotal DESC;
+PRODUCT;
