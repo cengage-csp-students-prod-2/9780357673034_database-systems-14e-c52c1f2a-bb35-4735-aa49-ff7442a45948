@@ -1,3 +1,4 @@
-SELECT COUNT(*) AS "Available Books"
-FROM BOOK
-WHERE PAT_ID IS NULL;
+SELECT
+MAX(BOOK_COST) AS "Most Expensive"
+FROM
+BOOK;
