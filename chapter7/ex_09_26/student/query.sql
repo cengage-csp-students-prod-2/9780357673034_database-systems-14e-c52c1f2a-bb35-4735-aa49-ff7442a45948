@@ -1,11 +1,9 @@
 SELECT
-SUM(CUS_BALANCE) as "Total Balance",
-MIN(CUS_BALANCE) as "Minimum Balance",
-MAX(CUS_BALANCE) as "Maximum Balance",
-ROUND(AVG(CUS_BALANCE), 2) as "Average Balance"
+P_DESCRIPT,
+P_QOH,
+P_PRICE,
+P_QOH * P_PRICE as 'Subtotal'
 FROM
-CUSTOMER
-WHERE
-CUS_CODE NOT IN (
-SELECT CUS_CODE
-FROM INVOICE);
+PRODUCT
+ORDER BY
+Subtotal DESC;
